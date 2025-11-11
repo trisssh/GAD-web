@@ -42,12 +42,12 @@ export default function Header() {
     {
       id: 2,
       name: "Barangay",
-      link: "barangaydatabase",
+      link: "/barangaydatabase",
     },
     {
       id: 3,
       name: "Documents",
-      link: "documents",
+      link: "/documents",
     },
   ];
 
@@ -134,7 +134,7 @@ export default function Header() {
                 DATABASE
               </Link> */}
               <div className="relative group">
-                <Link className="hover:text-[#DA78B5] flex items-center">
+                <button className="hover:text-[#DA78B5] flex items-center">
                   DATABASE
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export default function Header() {
                       d="m19.5 8.25-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </Link>
+                </button>
 
                 <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md">
                   <ul>
@@ -239,7 +239,7 @@ export default function Header() {
                       <ul>
                         <li>
                           <Link
-                            to="/database/sector"
+                            to="/journaldatabase"
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >
@@ -248,7 +248,7 @@ export default function Header() {
                         </li>
                         <li>
                           <Link
-                            to="/database/barangay"
+                            to="/barangaydatabase"
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >
@@ -257,7 +257,7 @@ export default function Header() {
                         </li>
                         <li>
                           <Link
-                            to="/database/document"
+                            to="/documents"
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >

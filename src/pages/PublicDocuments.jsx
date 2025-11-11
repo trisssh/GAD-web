@@ -44,7 +44,7 @@ export default function PublicDocuments() {
   return (
     <>
       <div className="font-extrabold text-2xl text-gray-800 mb-3">
-        Public Documents
+        Documents
       </div>
       <hr className="border-t border-gray-400 w-full mb-4" />
 

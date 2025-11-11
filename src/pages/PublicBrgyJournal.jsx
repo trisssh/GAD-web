@@ -122,7 +122,7 @@ export default function PublicBrgyJournal() {
         style={{ maxHeight: "80vh" }} // Adjust to fit your layout (e.g., 80vh for 80% of viewport height)
       >
         <div className="font-extrabold text-2xl text-gray-800 mb-3">
-          Public Barangay Journal
+          Barangay Journal
         </div>
         <hr className="border-t border-gray-400 w-full mb-4" />
 
