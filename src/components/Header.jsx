@@ -31,6 +31,36 @@ export default function Header() {
     setShowPopup(false);
   };
 
+  //navbar dropdown for GAD
+  const DropdownGAD = [
+    {
+      id: 1,
+      name: "Sector",
+      link: "#",
+    },
+
+    {
+      id: 2,
+      name: "Barangay",
+      link: "#",
+    },
+    {
+      id: 3,
+      name: "Documents",
+      link: "#",
+    },
+  ];
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="flex flex-col min-h-screen scroll-smooth">
       {/* HEADER */}
@@ -100,9 +130,43 @@ export default function Header() {
               <a href="/#definitions" className="hover:text-[#DA78B5]">
                 DEFINITION OF TERMS
               </a>
-              <Link to="/database" className="hover:text-[#DA78B5]">
+              {/* <Link to="/database" className="hover:text-[#DA78B5]">
                 DATABASE
-              </Link>
+              </Link> */}
+              <div className="relative group">
+                <Link className="hover:text-[#DA78B5] flex items-center">
+                  DATABASE
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-4 font-bold mx-1"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </Link>
+
+                <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md">
+                  <ul>
+                    {DropdownGAD.map((data) => (
+                      <li key={data.id}>
+                        <a
+                          href={data.link}
+                          className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
+                        >
+                          {data.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </nav>
           </div>
 
@@ -110,40 +174,101 @@ export default function Header() {
           {isNavOpen && (
             <nav className="lg:hidden mt-4 flex flex-col space-y-2 font-medium text-base text-center text-white">
               <a
-                href="#home"
+                href="/#home"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
                 onClick={() => setIsNavOpen(false)}
               >
                 HOME
               </a>
               <a
-                href="#about"
+                href="/#about"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
                 onClick={() => setIsNavOpen(false)}
               >
                 ABOUT US
               </a>
               <a
-                href="#laws"
+                href="/#laws"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
                 onClick={() => setIsNavOpen(false)}
               >
                 LAWS AND ISSUANCES
               </a>
               <a
-                href="#definitions"
+                href="/#definitions"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
                 onClick={() => setIsNavOpen(false)}
               >
                 DEFINITION OF TERMS
               </a>
-              <Link
+
+              {/* <Link
                 to="/database"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
                 onClick={() => setIsNavOpen(false)}
               >
                 DATABASE
-              </Link>
+              </Link> */}
+
+              <div className="relative">
+                <button onClick={toggleDropdown} className="w-full ">
+                  <div className="hover:bg-[#DA78B5] rounded transition-all duration-300 flex justify-center items-center">
+                    DATABASE
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className={`size-4 font-bold mx-1 transition-transform ${
+                        isDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                {isDropdownOpen && (
+                  <div className="flex justify-center">
+                    <div className="absolute z-[9999] w-[350px] rounded-md bg-white p-2 text-black shadow-md mt-1">
+                      <ul>
+                        <li>
+                          <Link
+                            to="/database/sector"
+                            className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
+                            onClick={closeDropdown}
+                          >
+                            Sector
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/database/barangay"
+                            className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
+                            onClick={closeDropdown}
+                          >
+                            Barangay
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/database/document"
+                            className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
+                            onClick={closeDropdown}
+                          >
+                            Document
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
             </nav>
           )}
         </div>
