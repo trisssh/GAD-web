@@ -3,6 +3,7 @@ import { Component, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
+import PublicJournal from "./pages/PublicJournal";
 import App from "./App";
 // import Database from "./Database";
 import "./index.css";
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/database",
-        element: <App />,
+        element: <PublicJournal />,
       },
     ],
   },

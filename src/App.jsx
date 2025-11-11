@@ -6,13 +6,11 @@ import "./App.css";
 
 function App() {
   // MODAL STATE for Data Privacy Popup
-  const [showPopup, setShowPopup] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false); // if "No" button selected to Data Privacy
 
   // Show popup (Data Privacy)
-  useEffect(() => {
-    setShowPopup(true);
-  }, []);
+  //useEffect(() => {
+  //  setShowPopup(true);
+  //}, []);
 
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -143,7 +141,7 @@ function App() {
         </div>
       </div>
       {/* LAWS and ISSUANCES */}
-      <div id="laws" className="md:px-10 pt-20 pb-5 bg-white">
+      <div id="laws" name="law" className="md:px-10 pt-20 pb-5 bg-white">
         <h1 className="text-3xl font-bold mb-5 text-gray-800 text-center">
           LAWS & ISSUANCES
         </h1>
@@ -476,74 +474,6 @@ function App() {
           />
         </svg>
       </button>
-
-      {/* DATA PRIVACY POP */}
-      {showPopup && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm">
-          <div className="fixed bottom-0 left-0 bg-white w-full px-5 py-1">
-            <div className="grid md:flex">
-              {/* Date Privacy Icon */}
-              <div className="flex justify-center md:justify-start">
-                <img src="DPO.jpg" className="size-35" />
-              </div>
-
-              {/* Data Privacy Notice and Buttons */}
-              <div className="md:flex md:items-center md:gap-20">
-                <div className="">
-                  <h2 className="text-xl font-semibold mb-1 text-gray-800">
-                    Data Privacy Notice
-                  </h2>
-
-                  <p className="text-gray-600 text-justify text-sm">
-                    By continuing, you acknowledge and accept the San Pablo City
-                    GAD’s Data Privacy Notice, in line with the Data Privacy Act
-                    of 2012. Would you like to continue?{" "}
-                    {/* <a href="#" className="text-blue-600 underline">
-                        Read More
-                      </a> */}
-                  </p>
-                </div>
-
-                {/* Buttons for Data Privacy */}
-                <div className="flex justify-center my-4 md:my-0 gap-5">
-                  <button
-                    onClick={() => setShowPopup(false)}
-                    className="bg-purple-600 py-2 w-40 md:w-30 cursor-pointer translate-all duration-300 hover:bg-purple-700"
-                  >
-                    Yes
-                  </button>
-                  {/* 👇 “No” button triggers overlay */}
-                  <button
-                    onClick={() => setShowOverlay(true)}
-                    className="bg-gray-200 py-2 w-40 md:w-30 cursor-pointer translate-all duration-300 hover:bg-gray-300 border"
-                  >
-                    No
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* “No” clicked to Data Privacy */}
-      {showOverlay && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
-            <h2 className="text-lg font-semibold mb-3">Action Cancelled</h2>
-            <p className="text-gray-600 mb-4">
-              You chose not to continue to our SPC GAD Portal. Would you like to
-              close this message?
-            </p>
-            <button
-              onClick={() => setShowOverlay(false)}
-              className="bg-purple-600 text-white px-5 py-2 rounded hover:bg-purple-500"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* FOOTER */}
       <footer className="bg-gradient-to-l from-[#DA78B5] to-[#2575fc] text-white">
