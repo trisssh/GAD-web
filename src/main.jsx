@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
 import PublicJournal from "./pages/PublicJournal";
+import PublicBrgyJournal from "./pages/PublicBrgyJournal";
+import PublicDocuments from "./pages/PublicDocuments";
 import App from "./App";
 // import Database from "./Database";
 import "./index.css";
@@ -17,8 +19,16 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/database",
+        path: "/journaldatabase",
         element: <PublicJournal />,
+      },
+      {
+        path: "/barangaydatabase",
+        element: <PublicBrgyJournal />,
+      },
+      {
+        path: "/documents",
+        element: <PublicDocuments />,
       },
     ],
   },

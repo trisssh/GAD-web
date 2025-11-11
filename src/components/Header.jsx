@@ -36,18 +36,18 @@ export default function Header() {
     {
       id: 1,
       name: "Sector",
-      link: "#",
+      link: "/journaldatabase",
     },
 
     {
       id: 2,
       name: "Barangay",
-      link: "#",
+      link: "barangaydatabase",
     },
     {
       id: 3,
       name: "Documents",
-      link: "#",
+      link: "documents",
     },
   ];
 
