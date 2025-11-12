@@ -42,13 +42,13 @@ export default function PublicDocuments() {
   };
 
   return (
-    <>
+    <div className="p-5">
       <div className="font-extrabold text-2xl text-gray-800 mb-3">
         Documents
       </div>
       <hr className="border-t border-gray-400 w-full mb-4" />
 
-      <div className="grid grid-cols-1 gap-4 w-full sm:p-4 bg-white rounded-lg shadow-sm">
+      <div className="grid grid-cols-1 gap-4 w-full sm:p-4 bg-white">
         <InputSection
           selectedSector={selectedSector}
           setSelectedSector={setSelectedSector}
@@ -69,7 +69,7 @@ export default function PublicDocuments() {
           keyword={keyword}
         />
       </div>
-    </>
+    </div>
   );
 }
 

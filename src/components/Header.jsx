@@ -72,17 +72,19 @@ export default function Header() {
               <img
                 src="logo-SPC-est.png"
                 alt="San Pablo Logo"
-                className="size-18 md:size-15 object-contain rounded-full"
+                className="size-15 object-contain rounded-full"
               />
 
               <div className="cursor-pointer">
                 <h1 className="md:ml-2 text-2xl font-bold tracking-widest text-center font-mono">
-                  GENDER AND DEVELOPMENT
+                  SPC GAD Portal
                 </h1>
                 <span className="text-sm italic text-gray-300 flex justify-center items-center">
-                  <hr className="md:w-15 text-white" />
-                  <p className="mx-1">City Government of San Pablo</p>
-                  <hr className="md:w-15 text-white" />
+                  <hr className="md:w-12 text-white" />
+                  <p className="mx-1 text-center">
+                    City Government of San Pablo
+                  </p>
+                  <hr className="md:w-12 text-white" />
                 </span>
               </div>
             </div>
@@ -201,7 +203,6 @@ export default function Header() {
               >
                 DEFINITION OF TERMS
               </a>
-
               {/* <Link
                 to="/database"
                 className="hover:bg-[#DA78B5] rounded transition-all duration-300"
@@ -210,8 +211,10 @@ export default function Header() {
                 DATABASE
               </Link> */}
 
+
+              {/* DATABASE Dropdown */}
               <div className="relative">
-                <button onClick={toggleDropdown} className="w-full ">
+                <button onClick={toggleDropdown} className="w-full">
                   <div className="hover:bg-[#DA78B5] rounded transition-all duration-300 flex justify-center items-center">
                     DATABASE
                     <svg
@@ -235,7 +238,7 @@ export default function Header() {
 
                 {isDropdownOpen && (
                   <div className="flex justify-center">
-                    <div className="absolute z-[9999] w-[350px] rounded-md bg-white p-2 text-black shadow-md mt-1">
+                    <div className="absolute z-[9999] w-[350px] sm:w-full rounded-md bg-white p-2 text-black shadow-md mt-1">
                       <ul>
                         <li>
                           <Link

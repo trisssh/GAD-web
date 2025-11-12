@@ -55,7 +55,7 @@ export default function PublicDocumentTable({
   }, [documents, selectedSector, selectedSubsector, selectedGender, keyword]);
 
   return (
-    <div className="overflow-x-auto bg-white rounded-xl shadow-md p-4 mt-6">
+    <div className="overflow-x-auto border border-gray-200 rounded-xl shadow-md p-4 mt-6 ">
       <Toaster position="top-right" />
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold text-gray-800">
@@ -77,8 +77,8 @@ export default function PublicDocumentTable({
               <th className="px-4 py-2 text-left">Sub Sector</th>
               <th className="px-4 py-2 text-left">Gender</th>
               <th className="px-4 py-2 text-center">Author</th>
-              {/* <th className="px-4 py-2 text-center">Private</th>
-              <th className="px-4 py-2 text-center">Action</th> */}
+              <th className="px-4 py-2 text-center">Private</th>
+              {/* <th className="px-4 py-2 text-center">Action</th> */}
             </tr>
           </thead>
           <tbody>
@@ -112,7 +112,7 @@ function PublicDocumentTableRow({ entry }) {
       </td>
       {/* <td className="border border-gray-200 px-4 py-2 text-center">
         {entry.private_status ? "✅" : "❌"}
-      </td>
+      </td> */}
       <td className="border border-gray-200 px-4 py-2 text-center relative">
         <button
           onClick={toggleDropdown}
@@ -132,7 +132,7 @@ function PublicDocumentTableRow({ entry }) {
             </a>
           </div>
         )}
-      </td> */}
+      </td>
     </tr>
   );
 }
