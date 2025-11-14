@@ -35,19 +35,24 @@ export default function Header() {
   const DropdownGAD = [
     {
       id: 1,
-      name: "Sector",
+      name: "Sector Journal",
       link: "/journaldatabase",
     },
 
     {
       id: 2,
-      name: "Barangay",
+      name: "Barangay Journal",
       link: "/barangaydatabase",
     },
     {
       id: 3,
-      name: "Documents",
+      name: "Sector Documents",
       link: "/documents",
+    },
+    {
+      id: 3,
+      name: "Barangay Document",
+      link: "/documents?type=barangay",
     },
   ];
 
@@ -243,7 +248,7 @@ export default function Header() {
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >
-                            Sector
+                            Sector Journal
                           </Link>
                         </li>
                         <li>
@@ -252,7 +257,7 @@ export default function Header() {
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >
-                            Barangay
+                            Barangay Journal
                           </Link>
                         </li>
                         <li>
@@ -261,7 +266,16 @@ export default function Header() {
                             className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
                             onClick={closeDropdown}
                           >
-                            Document
+                            Sector Document
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/documents?type=barangay"
+                            className="inline-block w-full rounded-md p-2 hover:bg-[#7F77D8] hover:text-white text-center"
+                            onClick={closeDropdown}
+                          >
+                            Barangay Document
                           </Link>
                         </li>
                       </ul>
