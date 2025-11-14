@@ -48,11 +48,28 @@ function App() {
       <div id="about" className="pt-10">
         {/* <!-- GENDER AND DEVELOPMENT w/ about us --> */}
         <div>
-          <h2 className="text-4xl font-bold text-center">
+          {/* <h2 className="text-4xl font-bold text-center">
             GENDER AND DEVELOPMENT
-          </h2>
+          </h2> */}
+          <div>
+            <span className="text-lg  text-gray-900 flex justify-center items-center">
+              {/* <hr className="md:w-40 text-purple-500" /> */}
+              <p className=" font-bold">SAN PABLO CITY</p>
+              {/* <hr className="md:w-40 text-purple-500" /> */}
+            </span>
+            <h2 className="text-4xl font-bold text-center">
+              GENDER AND DEVELOPMENT
+            </h2>
+          </div>
+          <span className="text-base  text-gray-800 flex justify-center items-center">
+            {/* <hr className="md:w-45 text-purple-500" /> */}
+            <p className="mx-1 font-bold">
+              Portal <span>(SGP)</span>{" "}
+            </p>
+            {/* <hr className="md:w-45 text-purple-500" /> */}
+          </span>
           <div className="text-center pt-4">
-            <h3 className="text-base text-[#7F77D8] font-bold">ABOUT US</h3>
+            <h3 className="text-xl text-[#7F77D8] font-bold">ABOUT US</h3>
             <p className="text-gray-600 mx-10 md:mx-90">
               As for the Executive 2025—Reconstitution of the Gender and
               Development (GAD) of the City of San Pablo
@@ -64,10 +81,10 @@ function App() {
           {/* <!-- Mission Card --> */}
           <div className="bg-white hover:bg-purple-200 border border-gray-300 p-6 rounded-lg transition-all duration-300 cursor-pointer shadow-lg ml-4 my-4 md:m-5">
             <div className="flex flex-col items-center space-x-4">
-              <div className="bg-purple-50 p-4 rounded-full">
+              <div className="bg-white p-4 rounded-full border border-purple-400 shadow-md filter drop-shadow-[0_0_0.25rem_#7F77D8]">
                 {/* <!-- Mission Icon --> */}
                 <svg
-                  className="w-6 h-6 text-purple-600"
+                  className="w-6 h-6 text-purple-600 "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -101,7 +118,7 @@ function App() {
           {/* <!-- Vision Card --> */}
           <div className="bg-white hover:bg-purple-200 p-6 border border-gray-300 rounded-lg   transition-all duration-300 cursor-pointer shadow-lg m-4 md:m-5">
             <div className="flex flex-col items-center space-x-4">
-              <div className="bg-purple-50 p-4 rounded-full ml-2">
+              <div className="bg-white p-4 rounded-full border border-purple-400 shadow-md filter drop-shadow-[0_0_0.25rem_#7F77D8]">
                 {/* <!-- Vision Icon --> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -217,7 +234,7 @@ function App() {
         className="bg-blue-200 p-6 mb-5 rounded-lg shadow-lg m-4 md:mx-10"
       >
         <div className="flex flex-col items-center space-x-4">
-          <div className="bg-blue-50 p-4 rounded-full">
+          <div className="bg-white p-4 rounded-full border border-blue-400 shadow-md filter drop-shadow-[0_0_0.25rem_#2575fc]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -238,15 +255,15 @@ function App() {
               DEFINITION OF TERMS
             </h1>
             <span className="text-gray-600 text-justify">
-              Gender and Development (GAD) – Refers to the development
-              perspective and process....
+              <span className="font-bold">"SGP"</span> also known as the San
+              Pablo City Gender and Development (GAD) Portal
             </span>
 
             <div className="mt-2 flex justify-center">
               {/* Trigger SEE MORE Button */}
               <button
                 onClick={toggleModal}
-                className="border border-[#2575fc] flex items-center gap-2 text-[#2575fc] hover:text-white text-base font-medium bg-white hover:bg-blue-300 transition-all duration-300 shadow-xl  px-15 md:px-25 py-2 rounded-md cursor-pointer"
+                className="border border-[#2575fc] flex items-center gap-2 text-[#2575fc] hover:text-white text-base font-medium bg-white hover:bg-blue-300 transition-all duration-300 border-blue-600 shadow-md shadow-blue-600 px-15 md:px-25 py-2 rounded-md cursor-pointer"
               >
                 See More
               </button>
@@ -273,6 +290,10 @@ function App() {
 
             {/* Content */}
             <div className="p-6 space-y-4 text-gray-800 leading-relaxed">
+              <p className="text-gray-900 text-justify text-2xl">
+                <span className="font-bold text-[#2575fc]">"SGP"</span> also
+                known as the San Pablo City Gender and Development (GAD) Portal
+              </p>
               <p>
                 <span className="font-semibold text-lg text-[#2575fc]">
                   Gender and Development (GAD)
@@ -282,6 +303,7 @@ function App() {
                 violence, respectful of human rights, supportive of
                 self-determination and actualization of human potential.
               </p>
+
               <p>
                 <span className="font-semibold text-lg text-[#2575fc]">
                   Gender Analysis
@@ -476,7 +498,7 @@ function App() {
       </button>
 
       {/* FOOTER */}
-      <footer className="bg-gradient-to-l from-[#DA78B5] to-[#2575fc] text-white">
+      <footer className="bg-gradient-to-l from-[#DA78B5] to-[#2575fc] text-white ">
         <div className="flex flex-col items-center justify-center text-sm p-4">
           <span className="text-center">
             © 2025

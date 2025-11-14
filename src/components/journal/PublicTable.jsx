@@ -15,52 +15,54 @@ export default function PublicTable({ journalData, isBarangay = false }) {
   });
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 mt-6 relative overflow-y-auto max-h-[60vh]">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold text-gray-800">Journal Data</h2>
-        <div className="flex space-x-2">
-          <button
-            onClick={handlePrint}
-            className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm"
-          >
-            Print / Save as PDF
-          </button>
+    <div className="p-1 shadow-md border border-gray-200  rounded-xl ">
+      <div className="bg-white p-4 mt-6 relative overflow-y-auto max-h-[60vh]">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-gray-800">Journal Data</h2>
+          <div className="flex space-x-2">
+            <button
+              onClick={handlePrint}
+              className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm"
+            >
+              Print / Save as PDF
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* 👇 Attach ref here */}
-      <div ref={tableRef}>
-        <table className="min-w-full border border-gray-300 rounded-lg">
-          <thead className="bg-[#13B27F] text-white">
-            <tr>
-              <th className="px-4 py-2 text-left">Year</th>
-              <th className="px-4 py-2 text-left">
-                {isBarangay ? "Barangay" : "Sector"}
-              </th>
-              {!isBarangay && (
-                <th className="px-4 py-2 text-left">Sub Sector</th>
-              )}
-              <th className="px-4 py-2 text-left">Data Requirement</th>
-              <th className="px-4 py-2 text-center">Population</th>
-              <th className="px-4 py-2 text-center">Male</th>
-              <th className="px-4 py-2 text-center">Female</th>
-              <th className="px-4 py-2 text-left">Source</th>
-              <th className="px-4 py-2 text-left">Remarks</th>
-              {/* <th className="px-4 py-2 text-left hide-on-print">
+        {/* 👇 Attach ref here */}
+        <div ref={tableRef}>
+          <table className="min-w-full border border-gray-300 rounded-lg">
+            <thead className="bg-[#13B27F] text-white">
+              <tr>
+                <th className="px-4 py-2 text-left">Year</th>
+                <th className="px-4 py-2 text-left">
+                  {isBarangay ? "Barangay" : "Sector"}
+                </th>
+                {!isBarangay && (
+                  <th className="px-4 py-2 text-left">Sub Sector</th>
+                )}
+                <th className="px-4 py-2 text-left">Data Requirement</th>
+                <th className="px-4 py-2 text-center">Population</th>
+                <th className="px-4 py-2 text-center">Male</th>
+                <th className="px-4 py-2 text-center">Female</th>
+                <th className="px-4 py-2 text-left">Source</th>
+                <th className="px-4 py-2 text-left">Remarks</th>
+                {/* <th className="px-4 py-2 text-left hide-on-print">
                                 Created By
                             </th> */}
-            </tr>
-          </thead>
-          <tbody>
-            {groupedData.map((entry) => (
-              <JournalTableRow
-                key={entry.id}
-                entry={entry}
-                isBarangay={isBarangay}
-              />
-            ))}
-          </tbody>
-        </table>
+              </tr>
+            </thead>
+            <tbody>
+              {groupedData.map((entry) => (
+                <JournalTableRow
+                  key={entry.id}
+                  entry={entry}
+                  isBarangay={isBarangay}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
