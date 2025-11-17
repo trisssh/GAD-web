@@ -71,11 +71,11 @@ export default function PublicDocumentTable({
     return (
         <div className="overflow-x-auto bg-white rounded-xl shadow-md p-4 mt-6">
             <Toaster position="top-right" />
-            <div className="flex justify-between items-center mb-4">
+            {/* <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold text-gray-800">
-                    Public Document Data
+                    Public Docuasdsment Data
                 </h2>
-            </div>
+            </div> */}
 
             {loading ? (
                 <p className="text-center py-6 text-gray-500">Loading...</p>
@@ -87,7 +87,7 @@ export default function PublicDocumentTable({
                         <tr>
                             <th className="px-4 py-2 text-left">Date</th>
                             <th className="px-4 py-2 text-left">Title</th>
-                            <th className="px-4 py-2 text-left">Type</th>
+                            {/* <th className="px-4 py-2 text-left">Type</th> */}
                             <th className="px-4 py-2 text-left">{documentType === 'sector' ? 'Sector' : 'Barangay'}</th>
                             {documentType === 'sector' && <th className="px-4 py-2 text-left">Sub Sector</th>}
                             <th className="px-4 py-2 text-left">Gender</th>
@@ -120,9 +120,9 @@ function PublicDocumentTableRow({ entry }) {
             <td className="border border-gray-200 px-4 py-2">
                 {entry.document_title}
             </td>
-            <td className="border border-gray-200 px-4 py-2">
+            {/* <td className="border border-gray-200 px-4 py-2">
                 {entry.document_type}
-            </td>
+            </td> */}
             <td className="border border-gray-200 px-4 py-2">
                 {entry.document_type === 'sector' ? entry.sector_name : entry.barangay_name}
             </td>
@@ -131,9 +131,9 @@ function PublicDocumentTableRow({ entry }) {
                     {entry.sub_sector_name || "—"}
                 </td>
             )}
-         <td className="border border-gray-200 px-4 py-2">
+         {/* <td className="border border-gray-200 px-4 py-2">
                 {entry.sub_sector_name || "—"}
-            </td>
+            </td> */}
             <td className="border border-gray-200 px-4 py-2">{entry.gender}</td>
             <td className="border border-gray-200 px-4 py-2 text-center">
                 {entry.document_author}
