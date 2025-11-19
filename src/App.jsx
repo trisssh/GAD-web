@@ -163,7 +163,7 @@ function App() {
           LAWS & ISSUANCES
         </h1>
 
-        <ul className="space-y-4 text-sm md:grid md:grid-cols-3 md:gap-10 ">
+        <ul className="text-sm grid grid-cols-1  md:grid md:grid-cols-5 gap-5 md:gap-3 ">
           {[
             {
               href: "/pds_docu/Amendments to PCW-DILG-DBM-NEDA JMC No. 2013-01 Guidelines on the Localization of the Magna Carta of Women.pdf",
@@ -198,7 +198,7 @@ function App() {
           ].map(({ href, label }) => (
             <li
               key={href}
-              className=" group flex flex-col items-center space-x-3 p-10 md:px-10 md:py-12 rounded-md hover:bg-pink-100 transition-all duration-300 border border-gray-200 mx-15 md:m-0 shadow-lg"
+              className=" group flex flex-col items-center space-x-3 p-5 rounded-md hover:bg-pink-100 transition-all duration-300 border border-gray-200 mx-15 md:m-0 shadow-lg py-10 md:py-5 "
             >
               {/* Document-download icon */}
               <svg
