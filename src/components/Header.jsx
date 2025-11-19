@@ -80,17 +80,24 @@ export default function Header() {
                 className="size-15 object-contain rounded-full"
               />
 
-              <div className="cursor-pointer">
-                <h1 className="md:ml-2 text-2xl font-bold tracking-widest text-center font-mono">
+              {/* <div className="cursor-pointer">
+                <h1 className="md:ml-2 text-2xl font-bold tracking-widest font-roboto uppercase">
                   SPC GAD Portal
                 </h1>
-                <span className="text-sm italic text-gray-300 flex justify-center items-center">
-                  <hr className="md:w-12 text-white" />
-                  <p className="mx-1 text-center">
-                    City Government of San Pablo
-                  </p>
-                  <hr className="md:w-12 text-white" />
+                <span className="text-sm italic text-gray-300 flex justify-start items-center">
+                   <hr className="md:w-12 text-white" /> 
+                  <p>City Government of San Pablo</p>
+                   <hr className="md:w-12 text-white" /> 
                 </span>
+              </div> */}
+
+              <div className="cursor-pointer mx-4 flex flex-col gap-0">
+                <h1 className="text-2xl font-semibold font-openSans uppercase">
+                  SPC GAD Portal
+                </h1>
+                <small className="text-gray-300 ">
+                  City Government of San Pablo
+                </small>
               </div>
             </div>
 
@@ -215,7 +222,6 @@ export default function Header() {
               >
                 DATABASE
               </Link> */}
-
 
               {/* DATABASE Dropdown */}
               <div className="relative">

@@ -8,3 +8,14 @@ html {
   transform: scale(1.1); 
 }
 
+@theme {
+  --font-openSans: "Open Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-robotoSlab: "Roboto Slab", serif;
+   --font-stackSans: "Stack Sans Text", sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
