@@ -22,7 +22,7 @@ export default function PublicTable({ journalData, isBarangay = false }) {
           <div className="flex space-x-2">
             <button
               onClick={handlePrint}
-              className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm"
+              className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm"
             >
               Print / Save as PDF
             </button>
